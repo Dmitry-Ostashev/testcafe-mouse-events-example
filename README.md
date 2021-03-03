@@ -1,0 +1,1 @@
+# testcafe-mouse-events-example

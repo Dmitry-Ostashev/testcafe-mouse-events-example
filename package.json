@@ -1,0 +1,22 @@
+{
+  "name": "testcafe-mouse-events-example",
+  "version": "1.0.0",
+  "description": "Example illustrating how to trigger mouse events",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitry-Ostashev/testcafe-mouse-events-example.git"
+  },
+  "author": "Dmitry Ostashev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dmitry-Ostashev/testcafe-mouse-events-example/issues"
+  },
+  "homepage": "https://github.com/Dmitry-Ostashev/testcafe-mouse-events-example#readme",
+  "devDependencies": {
+    "testcafe": "^1.12.0"
+  }
+}

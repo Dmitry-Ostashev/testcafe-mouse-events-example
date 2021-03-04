@@ -13,11 +13,13 @@ test('Test', async t => {
 
     await t.wait(1000);
 
-    await triggerMouseEvent(slider, 'mousemove', { clientX: 300 });
+    await triggerMouseEvent(slider, 'mousemove', { clientX: 370 });
 
     await t.wait(1000);
 
     await triggerMouseEvent(slider, 'mouseup');
 
-    await t.debug();
+    await t
+        .expect(slider.offsetLeft).gte(352)
+        .expect(slider.offsetLeft).lte(353);
 });

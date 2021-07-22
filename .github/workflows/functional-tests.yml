@@ -1,0 +1,21 @@
+name: Functional Tests (recorder)
+
+on:
+  pull_request:
+    branches: 
+      - '**'
+
+jobs:
+  test:
+    runs-on: [windows-2019]
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run test

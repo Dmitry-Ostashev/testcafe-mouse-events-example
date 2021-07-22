@@ -4,7 +4,7 @@
   "description": "Example illustrating how to trigger mouse events",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests/*.js"
+    "test": "testcafe ie ./tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Dmitry-Ostashev/testcafe-mouse-events-example#readme",
   "devDependencies": {
-    "testcafe": "^1.12.0"
+    "testcafe": "^1.15.0"
   }
 }

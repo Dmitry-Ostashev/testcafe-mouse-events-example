@@ -21,5 +21,6 @@ test('Test', async t => {
 
     await t
         .expect(slider.offsetLeft).gte(352)
-        .expect(slider.offsetLeft).lte(353);
+        .expect(slider.offsetLeft).lte(353)
+        .takeScreenshot();
 });

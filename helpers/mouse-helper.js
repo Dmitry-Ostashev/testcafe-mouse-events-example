@@ -6,7 +6,14 @@ export default function triggerMouseEvent (selector, type, options) {
         options.cancelable = true;
         options.view       = window;
 
-        const event         = new MouseEvent(type, options);
+        let event = null;
+
+        if (typeof(MouseEvent) === 'function')
+            event = new MouseEvent(type, options);
+        else {
+            event = document.createEvent('MouseEvent');
+            event.initMouseEvent(type, true, true, window, 0, 0, 0, options.clientX || 0, options.clientY || 0, false, false, false, false, 0, null);
+        }
         const targetElement = elementSelector();
 
         targetElement.dispatchEvent(event);
